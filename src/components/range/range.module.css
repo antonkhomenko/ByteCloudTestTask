@@ -1,0 +1,56 @@
+.rangeWrapper {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-self: center;
+}
+
+.rangeInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rangeContainer {
+    position: relative;
+}
+
+.rangeContainer:before, .rangeContainer:after {
+    position: absolute;
+    bottom: -15px;
+}
+
+
+.rangeContainer:before {
+    content: '0';
+    left: 0;
+}
+
+.rangeContainer:after {
+    content: '1000';
+    right: 0;
+}
+
+
+.rangeInput {
+    width: 100%;
+}
+
+
+.numberInput::-webkit-outer-spin-button,
+.numberInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.numberInput {
+    text-align: center;
+    border: none;
+}
+
+.numberInput:focus {
+    outline: none;
+}
+
+
