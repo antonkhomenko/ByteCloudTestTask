@@ -6,11 +6,16 @@
 }
 
 
+
 .content {
     width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 500px;
+    grid-row-gap: 20px;
     padding-top: 20px;
+    align-items: start;
 }
+

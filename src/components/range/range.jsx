@@ -3,7 +3,7 @@ import {useId, useState} from "react";
 
 const rangeParam = [0, 1000];
 
-const Range = ({title}) => {
+const Range = ({title, setCompaniesData}) => {
 
     const rangeId = useId();
 

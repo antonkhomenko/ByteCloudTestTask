@@ -1,0 +1,9 @@
+.bar {
+    width: 100%;
+    height: 40%;
+    background-color: #7c7c7c;
+    justify-self: start;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 10px 15px 0 0 rgb(0 0 0 / 10%);
+}
