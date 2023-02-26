@@ -1,16 +1,19 @@
 import classes from './range.module.css';
-import {useId, useState} from "react";
+import {useEffect, useId, useState} from "react";
 
 const rangeParam = [0, 1000];
 
-const Range = ({title, setCompaniesData}) => {
+const Range = ({title, changeRange}) => {
 
     const rangeId = useId();
 
     const [rangeValue, setRangeValue] = useState(0);
 
+
+
     const handleChange = (e) => {
         setRangeValue(e.target.value);
+        changeRange(e.target.value);
     }
 
     return (

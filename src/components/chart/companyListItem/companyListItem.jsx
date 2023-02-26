@@ -4,11 +4,6 @@ const CompanyListItem = ({title, img, option}) => {
 
     const radioName = useId();
 
-    // const companyItemClassName = [classes.companyItem];
-    //
-    // if(option) {
-    //     companyItemClassName.push(classes.companyItemForOption);
-    // }
 
     const companyItemClassName = useMemo(() => {
         const res = [classes.companyItem];
@@ -25,7 +20,7 @@ const CompanyListItem = ({title, img, option}) => {
                     <div className={classes.companyItemOptions}>
                         <label>
                             {`${option[0]} `}
-                            <input type="radio" name={radioName} checked/>
+                            <input type="radio" name={radioName}/>
                         </label>
                         <label>
                             {`${option[1]} `}

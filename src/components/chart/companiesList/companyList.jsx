@@ -10,7 +10,7 @@ const CompanyList = () => {
     return (
         <div className={classes.companyList}>
             <CompanyListItem title='Backblaze' img={backblaze}/>
-            <CompanyListItem title='BunnyNet' img={bunnyNet} option={['HDD', 'SSD']}/>
+            <CompanyListItem title='Bunny' img={bunnyNet} option={['HDD', 'SSD']}/>
             <CompanyListItem title='Scaleway' img={scaleway} option={['Multi', 'Single']}/>
             <CompanyListItem title='Vulrt' img={vultr}/>
         </div>
