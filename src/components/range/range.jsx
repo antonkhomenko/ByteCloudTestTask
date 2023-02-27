@@ -1,7 +1,7 @@
 import classes from './range.module.css';
 import {useEffect, useId, useRef, useState} from "react";
 
-const rangeParam = [0, 1000];
+export const rangeParam = [0, 1000];
 
 const Range = ({title, rangeValue, setRange}) => {
 

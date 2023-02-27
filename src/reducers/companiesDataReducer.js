@@ -7,7 +7,6 @@ export const companiesDataReducer = (state, action) => {
             return state.map((item) => {
               let price = action.range.storage * item.storagePrice + action.range.transfer * item.transferPrice;
               price = formatPrice(price);
-              if (action.range.storage === 0 && action.range.transfer === 0) price = 0;
               if (item.minPrice !== undefined && price < item.minPrice) price = item.minPrice;
               if (item.maxPrice !== undefined && price > item.maxPrice) price = item.maxPrice;
               if(item.options !== undefined) {
