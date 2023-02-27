@@ -1,18 +1,16 @@
 import classes from './companyList.module.css';
-import backblaze from '/src/assets/companiesLogo/backblaze.png';
-import bunnyNet from '/src/assets/companiesLogo/bunnyNet.png';
-import scaleway from '/src/assets/companiesLogo/scaleway.png';
-import vultr from '/src/assets/companiesLogo/vultr.png';
 import CompanyListItem from "../companyListItem/companyListItem.jsx";
 
 
-const CompanyList = () => {
+const CompanyList = ({dispatch, dataset, rangeOptions}) => {
+
     return (
         <div className={classes.companyList}>
-            <CompanyListItem title='Backblaze' img={backblaze}/>
-            <CompanyListItem title='Bunny' img={bunnyNet} option={['HDD', 'SSD']}/>
-            <CompanyListItem title='Scaleway' img={scaleway} option={['Multi', 'Single']}/>
-            <CompanyListItem title='Vulrt' img={vultr}/>
+            {
+                dataset.map(item => {
+                    return <CompanyListItem item={item} dispatch={dispatch} key={item.name} rangeOptions={rangeOptions}/>
+                })
+            }
         </div>
     );
 };

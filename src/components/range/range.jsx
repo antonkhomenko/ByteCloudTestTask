@@ -3,17 +3,13 @@ import {useEffect, useId, useState} from "react";
 
 const rangeParam = [0, 1000];
 
-const Range = ({title, changeRange}) => {
+const Range = ({title, rangeValue, setRange}) => {
 
     const rangeId = useId();
 
-    const [rangeValue, setRangeValue] = useState(0);
-
-
 
     const handleChange = (e) => {
-        setRangeValue(e.target.value);
-        changeRange(e.target.value);
+        setRange(+e.target.value);
     }
 
     return (
@@ -22,7 +18,7 @@ const Range = ({title, changeRange}) => {
                 <label htmlFor={rangeId}>{title}:</label>
                 <label>
                     <input
-                        type="number" min={rangeParam[0]} max={rangeParam[1]}
+                        type="number" min={rangeParam[0]} max={rangeParam[1]} step={1}
                         value={rangeValue} onChange={handleChange}
                         className={classes.numberInput}
                     />
@@ -31,7 +27,7 @@ const Range = ({title, changeRange}) => {
             </div>
             <div className={classes.rangeContainer}>
                 <input
-                    type="range" min={rangeParam[0]} max={rangeParam[1]} step='1' id={rangeId}
+                    type="range" min={rangeParam[0]} max={rangeParam[1]} step={1} id={rangeId}
                     value={rangeValue} onChange={handleChange} className={classes.rangeInput}
                 />
             </div>
