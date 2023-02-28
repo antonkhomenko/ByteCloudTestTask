@@ -1,6 +1,6 @@
 .bar {
     /*width: 20%;*/
-    height: 40%;
+    /*height: 40%;*/
     /*background: rgb(71,71,71);*/
     /*background: linear-gradient(90deg, rgba(71,71,71,1) 0%, rgba(112,112,112,1) 100%);*/
     justify-self: start;
@@ -25,4 +25,24 @@
     padding: 6px 8px;
     border-radius: 3px;
     font-weight: lighter;
+}
+
+@media screen and (max-width: 950px) {
+    .bar {
+        align-self: end;
+        border-radius: 5px 5px 0 0;
+        justify-self: center;
+    }
+
+    .price {
+        right: 50%;
+        top: -35px;
+        transform: translate(50%, 0);
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+
+
 }

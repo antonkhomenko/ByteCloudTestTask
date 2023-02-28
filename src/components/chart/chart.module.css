@@ -16,8 +16,27 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     background-image: url('/src/assets/chartBg.png');
-    background-size: contain;
+    background-size: cover;
     padding-right: 80px;
 }
+
+@media screen and (max-width: 950px) {
+    .chartWrapper {
+        grid-row: 1 / 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 1fr;
+        width: 90%;
+        justify-self: center;
+    }
+
+    .chartContainer {
+        grid-row: 1 / 2;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0;
+        justify-items: center;
+    }
+}
+
 
 
