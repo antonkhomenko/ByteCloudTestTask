@@ -39,4 +39,13 @@
 }
 
 
+@media screen and (max-width: 650px) {
+    .chartWrapper {
+        width: 100%;
+    }
+}
+
+
+
+
 
