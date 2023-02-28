@@ -69,7 +69,7 @@
 
     .companyIcon {
         width: auto;
-        height: 100%;
+        height: 35px;
         grid-row: 1 / 2;
     }
 
