@@ -1,8 +1,13 @@
 import classes from './companyListItem.module.css';
 import {useId, useMemo, useState} from "react";
-const CompanyListItem = ({item, dispatch, rangeOptions}) => {
+import {useRange} from "../../../hooks/useRange.js";
+import {useCompaniesDispatch} from "../../../hooks/useCompaniesDispatch.js";
+const CompanyListItem = ({item}) => {
 
     const {name : title, options, img} = item;
+
+    const rangeOptions = useRange();
+    const dispatchCompanies = useCompaniesDispatch();
 
     const radioName = useId();
     const [selected, setSelected] = useState(() => {
@@ -20,7 +25,7 @@ const CompanyListItem = ({item, dispatch, rangeOptions}) => {
     const handleCheck = (e) => {
         setSelected(e.target.value);
 
-        dispatch({
+        dispatchCompanies({
             type: 'setOptions',
             name: title,
             activeOption: e.target.value,

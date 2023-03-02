@@ -104,6 +104,7 @@ input[type="range"]::-moz-range-track {
 .numberInput {
     text-align: center;
     border: none;
+    padding: 5px 10px;
 }
 
 .numberInput:focus {
